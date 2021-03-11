@@ -14,7 +14,7 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@JsonProperty
 	private long id;
-	
+
 	@Column(nullable = false, unique = true)
 	@JsonProperty
 	private String username;
@@ -33,7 +33,11 @@ public class User {
     @JoinColumn(name = "cart_id", referencedColumnName = "id")
 	@JsonIgnore
     private Cart cart;
-	
+
+	@Column(nullable = false)
+	@JsonProperty
+	private String salt;
+
 	public Cart getCart() {
 		return cart;
 	}
@@ -57,7 +61,13 @@ public class User {
 	public void setUsername(String username) {
 		this.username = username;
 	}
-	
-	
-	
+
+	public String getSalt() {
+		return salt;
+	}
+
+	public void setSalt(String salt) {
+		this.salt = salt;
+	}
+
 }
