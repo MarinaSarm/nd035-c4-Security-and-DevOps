@@ -18,12 +18,12 @@ public class ParameterizedHelperTest {
 	public void test() {
 		fail("Not yet implemented");
 	}
-	
+
 	private String inp;
 	private String out;
-	
-	
-	
+
+
+
 public ParameterizedHelperTest(String inp, String out) {
 		super();
 		this.inp = inp;
@@ -35,10 +35,10 @@ public ParameterizedHelperTest(String inp, String out) {
 public static Collection initData() {
 	String empNames[][] = {{"sareeta","sareeta"},{"john","jhn"}};
 	return Arrays.asList(empNames);
-	
+
 }
-	
-	
+
+
 	/**
 	 * without parameters
 	 */
@@ -46,5 +46,9 @@ public static Collection initData() {
 	public void verify_number_is_the_same(){
 		assertEquals(inp, out);
 	}
-	
+
+	@Test
+	public void verify_input_names_are_not_the_same_as_output() {
+		assertNotEquals(inp, out);
+	}
 }
