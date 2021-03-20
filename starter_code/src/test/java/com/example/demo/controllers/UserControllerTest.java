@@ -123,7 +123,7 @@ public class UserControllerTest {
         assertEquals(0, user.getId());
         // mock user repository to obtain data
         when(userRepository.findById(user.getId())).thenReturn(Optional.of(user));
-        final ResponseEntity<User> response2 = userController.findById(Long.valueOf(0));
+        final ResponseEntity<User> response2 = userController.findById(0L);
         // we got response
         assertNotNull(response2);
         // status success
@@ -148,7 +148,7 @@ public class UserControllerTest {
         assertEquals(0, user.getId());
         // mock user repository to obtain data
         when(userRepository.findById(user.getId())).thenReturn(Optional.of(user));
-        final ResponseEntity<User> response2 = userController.findById(Long.valueOf(10));
+        final ResponseEntity<User> response2 = userController.findById(10L);
         // we got response
         assertNotNull(response2);
         // status success
