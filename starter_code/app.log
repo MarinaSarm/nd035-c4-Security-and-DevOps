@@ -149,3 +149,5 @@
 2021-03-21 16:49:29.484 ERROR 35940 --- [http-nio-8080-exec-9] c.e.demo.controllers.UserController      : item was not found
 2021-03-21 16:49:41.920  INFO 35940 --- [http-nio-8080-exec-4] c.e.demo.controllers.UserController      : item was successfully added to cart of Marina2
 2021-03-21 16:50:06.941  INFO 35940 --- [http-nio-8080-exec-5] c.e.demo.controllers.UserController      : oder was successfully submitted by user Marina2
+2021-03-21 20:24:47.651  WARN 35940 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h6m41s680ms442µs700ns).
+2021-03-21 20:48:15.692  WARN 35940 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=21m58s21ms785µs900ns).
